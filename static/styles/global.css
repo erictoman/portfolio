@@ -1,0 +1,113 @@
+@font-face {
+	font-family: 'QuickSand';
+	src: url('/fonts/Quicksand_Book.otf');
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'QuickSand';
+}
+
+main {
+	display: grid;
+	place-items: center;
+	place-content: center;
+	& section {
+		width: 700px;
+	}
+}
+
+@media (max-width: 768px) {
+	main {
+		& section {
+			width: 300px;
+		}
+	}
+	.skills {
+		display: flex;
+		flex-direction: column;
+	}
+	.skills-images {
+		display: flex;
+		flex-direction: column;
+		& img {
+			width: 100px;
+			height: 100px;
+		}
+	}
+}
+
+nav {
+	display: flex;
+	& ul {
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		& li {
+			list-style: none;
+			margin: 0 1rem;
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #000;
+		color: #fff;
+	}
+}
+
+.dark-mode {
+	background-color: #000;
+	color: #fff;
+}
+
+.skills-list {
+	> ul {
+		padding: 0;
+		> li {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
+.skills {
+	display: flex;
+	justify-content: space-between;
+}
+
+article {
+	&h1 {
+		font-weight: bold;
+	}
+}
+
+h2 {
+	font-style: italic;
+}
+
+.article-content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	& p {
+		margin: 1rem 0;
+	}
+	& img {
+		width: 150px;
+		height: 150px;
+		object-fit: contain;
+	}
+}
+
+.courses-list {
+	padding: 0;
+	& li {
+		text-align: justify;
+	}
+}
